@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C266D9291D6FC63F00501E92 /* GCDPracticeBarrier.m in Sources */ = {isa = PBXBuildFile; fileRef = C266D9281D6FC63F00501E92 /* GCDPracticeBarrier.m */; };
+		C28AA6121D74113A00EEA61C /* GCDGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C28AA6111D74113A00EEA61C /* GCDGroup.m */; };
 		C29DF8791D421AAE006D4C0A /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = C29DF8781D421AAE006D4C0A /* Person.m */; };
 		C29DF87C1D42F914006D4C0A /* PersonJSExports.m in Sources */ = {isa = PBXBuildFile; fileRef = C29DF87B1D42F913006D4C0A /* PersonJSExports.m */; };
 		C29DF87F1D42FD73006D4C0A /* people.js in Resources */ = {isa = PBXBuildFile; fileRef = C29DF87E1D42FD73006D4C0A /* people.js */; };
@@ -32,6 +34,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C266D9271D6FC63F00501E92 /* GCDPracticeBarrier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDPracticeBarrier.h; sourceTree = "<group>"; };
+		C266D9281D6FC63F00501E92 /* GCDPracticeBarrier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDPracticeBarrier.m; sourceTree = "<group>"; };
+		C28AA6101D74113A00EEA61C /* GCDGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCDGroup.h; sourceTree = "<group>"; };
+		C28AA6111D74113A00EEA61C /* GCDGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCDGroup.m; sourceTree = "<group>"; };
 		C29DF8771D421AAE006D4C0A /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		C29DF8781D421AAE006D4C0A /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		C29DF87A1D42F913006D4C0A /* PersonJSExports.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonJSExports.h; sourceTree = "<group>"; };
@@ -113,6 +119,10 @@
 				C29DF87B1D42F913006D4C0A /* PersonJSExports.m */,
 				C2AF98F01D40A2440030BE3F /* BlockViewController.h */,
 				C2AF98F11D40A2440030BE3F /* BlockViewController.m */,
+				C266D9271D6FC63F00501E92 /* GCDPracticeBarrier.h */,
+				C266D9281D6FC63F00501E92 /* GCDPracticeBarrier.m */,
+				C28AA6101D74113A00EEA61C /* GCDGroup.h */,
+				C28AA6111D74113A00EEA61C /* GCDGroup.m */,
 				C2AF98D71D408B700030BE3F /* Assets.xcassets */,
 				C2AF98D91D408B700030BE3F /* LaunchScreen.storyboard */,
 				C2AF98DC1D408B700030BE3F /* Info.plist */,
@@ -242,11 +252,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C28AA6121D74113A00EEA61C /* GCDGroup.m in Sources */,
 				C2AF98D31D408B700030BE3F /* ViewController.m in Sources */,
 				C2AF98D01D408B700030BE3F /* AppDelegate.m in Sources */,
 				C29DF8791D421AAE006D4C0A /* Person.m in Sources */,
 				C2AF98F21D40A2440030BE3F /* BlockViewController.m in Sources */,
 				C2AF98CD1D408B700030BE3F /* main.m in Sources */,
+				C266D9291D6FC63F00501E92 /* GCDPracticeBarrier.m in Sources */,
 				C29DF87C1D42F914006D4C0A /* PersonJSExports.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

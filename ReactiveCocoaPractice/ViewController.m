@@ -10,10 +10,16 @@
 #import "BlockViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
 #import "PersonJSExports.h"
+#import "GCDPracticeBarrier.h"
+#import "GCDGroup.h"
 
 @interface ViewController ()
 @property(nonatomic,weak)NSNumber *num;
 @end
+
+typedef int (^blk_t)(int);
+int global_val = 1;
+static int static_global_val = 2;
 
 @implementation ViewController
 @synthesize num;
@@ -35,9 +41,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 
 //    [self testFuncC];
-    [self gcdTest3];
-    
-    [self blockPassValue];
+//    [self gcdTest3];
+    [self blockTest1];
+//    [self gcdTestTime];
+
+//    [self blockPassValue];
 //    PersonJSExports *personJS = [[PersonJSExports alloc]init];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoLight];
@@ -46,6 +54,21 @@
     [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
     
     [self.view addSubview:button];
+    
+    
+    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    button1.titleLabel.text = @"2222";
+    [button1 setFrame:CGRectMake(100, 200, 100, 100)];
+    [button1 addTarget:self action:@selector(action1) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button1];
+    
+    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    button2.titleLabel.text = @"3333";
+    [button2 setFrame:CGRectMake(100, 300, 100, 100)];
+    [button2 addTarget:self action:@selector(button2) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self.view addSubview:button2];
 
 
 }
@@ -53,6 +76,53 @@
 - (void)action{
     BlockViewController *blockVC = [[BlockViewController alloc]initWithNibName:nil bundle:nil];
     [self.navigationController pushViewController:blockVC animated:YES];
+}
+
+
+- (void)action1{
+    GCDPracticeBarrier *blockVC = [[GCDPracticeBarrier alloc]initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:blockVC animated:YES];
+}
+
+- (void)button2
+{
+    GCDGroup *blockVC = [[GCDGroup alloc]initWithNibName:nil bundle:nil];
+    [self.navigationController pushViewController:blockVC animated:YES];
+}
+
+
+- (void)blockTest1
+{
+    int (^blk)(int) = ^(int count){return count+1;};
+    int tmp = blk(10);
+    NSLog(@"tmp %d",tmp);
+    
+    // 使用typedef的方式 定义一个名叫 blk2的block
+    blk_t blk2 = ^(int count){return count+2;};
+    int tmp2 = blk2(10);
+    NSLog(@"tmp %d",tmp2);
+    
+    /**
+     * 定义一个名叫blk3的 block
+     * block中可以直接使用 全局变量和全局静态变量 无需加 __block
+     * 其他的还是需要 __block
+     */
+    
+    __block NSString *needChange = @"";
+    void (^blk3)(void) = ^{
+        global_val +=2;
+        static_global_val +=1;
+        needChange = @"had changed";
+    };
+    blk3();
+}
+
+-(void)gcdTestTime
+{
+    dispatch_time_t time = dispatch_time(DISPATCH_TIME_NOW, 3ull * NSEC_PER_SEC);
+    dispatch_after(time, dispatch_get_main_queue(), ^{
+        NSLog(@"3 secs later i run");
+    });
 }
 
 -(void)gcdTest3
