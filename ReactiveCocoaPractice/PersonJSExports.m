@@ -33,7 +33,7 @@
 //    [context evaluateScript:@"var names = ['Grace', 'Ada', 'Margaret']"];
 //    [context evaluateScript:@"var triple = function(value) { return value * 3 }"];
 //
-//    JSValue *tripleNum2 = [context evaluateScript:@"triple(num)"];
+    JSValue *tripleNum2 = [context evaluateScript:@"triple(num)"];
 //    NSLog(@"tripleNum2: %d",[tripleNum2 toInt32]);
     
     // 给JS提供Object 和方法 其实就是model  Person.createWithFirstName:lastName:;

@@ -8,7 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-
+#import "ListViewController.h"
+#import "ExamViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,15 +18,23 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+
+    return YES;
+}
+
+/*
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     ViewController *vc = [[ViewController alloc]initWithNibName:nil bundle:nil];
-    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+    ListViewController *listVC = [[ListViewController alloc]initWithNibName:nil bundle:nil];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:listVC];
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
     self.window.rootViewController = nav;
     [self.window makeKeyAndVisible];
     return YES;
 }
+*/
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
