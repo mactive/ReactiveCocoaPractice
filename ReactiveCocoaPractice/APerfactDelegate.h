@@ -11,6 +11,9 @@
 
 @protocol APerfectDelegate <NSObject>
 
+@property(nonatomic, readonly)NSString *name;
+@property(nonatomic, readonly)NSNumber *count;
+
 @optional
 - (void)optionalSel;
 

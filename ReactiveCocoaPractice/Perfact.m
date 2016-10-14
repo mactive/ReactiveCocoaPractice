@@ -6,9 +6,9 @@
 //  Copyright © 2016 thinktube. All rights reserved.
 //
 
-#import "Perface.h"
+#import "Perfact.h"
 
-@implementation Perface
+@implementation Perfact
 
 @synthesize delegate;
 
@@ -29,7 +29,7 @@
 
 - (void)optionalSel
 {
-    NSLog(@"optionalSel");
+    NSLog(@"optionalSel %@",self.name);
 }
 
 - (void)requriedSel

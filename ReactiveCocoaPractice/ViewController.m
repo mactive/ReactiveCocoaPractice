@@ -46,7 +46,7 @@ static int static_global_val = 2;
 //    [self gcdTestTime];
 
 //    [self blockPassValue];
-//    PersonJSExports *personJS = [[PersonJSExports alloc]init];
+    PersonJSExports *personJS = [[PersonJSExports alloc]init];
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoLight];
     button.titleLabel.text = @"adfasdf";

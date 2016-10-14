@@ -7,7 +7,8 @@
 //
 
 #import "ExamViewController.h"
-#import "Perface.h"
+#import "Perfact.h"
+#import "MyClass.h"
 
 @interface ExamViewController ()<APerfectDelegate>
 @end
@@ -18,9 +19,13 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    Perface *per = [[Perface alloc] init];
+    Perfact *per = [[Perfact alloc] init];
     per.delegate = self;
     [per actionWithMethodName:nil];
+    
+    MyClass *cls = [[MyClass alloc]init];
+    NSLog(@"MyClass's name: %@",cls.name);
+    [cls methodA];
 }
 
 -(void)optionalSel

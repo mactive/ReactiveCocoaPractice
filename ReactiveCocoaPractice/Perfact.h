@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "APerfactDelegate.h"
-@interface Perface : NSObject<APerfectDelegate>
+@interface Perfact : NSObject<APerfectDelegate>
 
 @property(nonatomic, assign) id<APerfectDelegate> delegate;
 

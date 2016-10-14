@@ -23,7 +23,8 @@
 		C2AF98E61D408B700030BE3F /* ReactiveCocoaPracticeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AF98E51D408B700030BE3F /* ReactiveCocoaPracticeTests.m */; };
 		C2AF98F21D40A2440030BE3F /* BlockViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2AF98F11D40A2440030BE3F /* BlockViewController.m */; };
 		C2BFC3441D8F785A000B4065 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = C2BFC3431D8F785A000B4065 /* Car.m */; };
-		C2D7DC311D9184F8009E7316 /* Perface.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D7DC301D9184F8009E7316 /* Perface.m */; };
+		C2C203831DB0718600709B29 /* Thing.m in Sources */ = {isa = PBXBuildFile; fileRef = C2C203821DB0718600709B29 /* Thing.m */; };
+		C2D7DC311D9184F8009E7316 /* Perfact.m in Sources */ = {isa = PBXBuildFile; fileRef = C2D7DC301D9184F8009E7316 /* Perfact.m */; };
 		C2E9DCBC1D8E356A005827D3 /* ExamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2E9DCBB1D8E356A005827D3 /* ExamViewController.m */; };
 		C2E9DCBE1D8E36D3005827D3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C2E9DCBD1D8E36D3005827D3 /* Main.storyboard */; };
 /* End PBXBuildFile section */
@@ -68,10 +69,12 @@
 		C2AF98F11D40A2440030BE3F /* BlockViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlockViewController.m; sourceTree = "<group>"; };
 		C2BFC3421D8F785A000B4065 /* Car.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		C2BFC3431D8F785A000B4065 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
+		C2C203811DB0718600709B29 /* Thing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Thing.h; sourceTree = "<group>"; };
+		C2C203821DB0718600709B29 /* Thing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Thing.m; sourceTree = "<group>"; };
 		C2D7DC2E1D9184D5009E7316 /* APerfactDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APerfactDelegate.h; sourceTree = "<group>"; };
-		C2D7DC2F1D9184F8009E7316 /* Perface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perface.h; sourceTree = "<group>"; };
-		C2D7DC301D9184F8009E7316 /* Perface.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Perface.m; sourceTree = "<group>"; };
-		C2D7DC321D919557009E7316 /* ProtocolInherits.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProtocolInherits.h; sourceTree = "<group>"; };
+		C2D7DC2F1D9184F8009E7316 /* Perfact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Perfact.h; sourceTree = "<group>"; };
+		C2D7DC301D9184F8009E7316 /* Perfact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Perfact.m; sourceTree = "<group>"; };
+		C2D7DC321D919557009E7316 /* MyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyClass.h; sourceTree = "<group>"; };
 		C2E9DCBA1D8E356A005827D3 /* ExamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExamViewController.h; sourceTree = "<group>"; };
 		C2E9DCBB1D8E356A005827D3 /* ExamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExamViewController.m; sourceTree = "<group>"; };
 		C2E9DCBD1D8E36D3005827D3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -148,6 +151,7 @@
 		C2AF98CA1D408B700030BE3F /* ReactiveCocoaPractice */ = {
 			isa = PBXGroup;
 			children = (
+				C2C203801DB0716B00709B29 /* JSCore */,
 				C2D7DC2D1D9184A9009E7316 /* protocol */,
 				C2BFC3411D8F7843000B4065 /* basic */,
 				C2E9DCB91D8E3557005827D3 /* StroyBoard */,
@@ -197,13 +201,22 @@
 			name = basic;
 			sourceTree = "<group>";
 		};
+		C2C203801DB0716B00709B29 /* JSCore */ = {
+			isa = PBXGroup;
+			children = (
+				C2C203811DB0718600709B29 /* Thing.h */,
+				C2C203821DB0718600709B29 /* Thing.m */,
+			);
+			name = JSCore;
+			sourceTree = "<group>";
+		};
 		C2D7DC2D1D9184A9009E7316 /* protocol */ = {
 			isa = PBXGroup;
 			children = (
 				C2D7DC2E1D9184D5009E7316 /* APerfactDelegate.h */,
-				C2D7DC321D919557009E7316 /* ProtocolInherits.h */,
-				C2D7DC2F1D9184F8009E7316 /* Perface.h */,
-				C2D7DC301D9184F8009E7316 /* Perface.m */,
+				C2D7DC321D919557009E7316 /* MyClass.h */,
+				C2D7DC2F1D9184F8009E7316 /* Perfact.h */,
+				C2D7DC301D9184F8009E7316 /* Perfact.m */,
 			);
 			name = protocol;
 			sourceTree = "<group>";
@@ -326,7 +339,8 @@
 				C2679B3B1D758A00000817FE /* ListViewController.m in Sources */,
 				C2AF98D01D408B700030BE3F /* AppDelegate.m in Sources */,
 				C29DF8791D421AAE006D4C0A /* Person.m in Sources */,
-				C2D7DC311D9184F8009E7316 /* Perface.m in Sources */,
+				C2C203831DB0718600709B29 /* Thing.m in Sources */,
+				C2D7DC311D9184F8009E7316 /* Perfact.m in Sources */,
 				C2E9DCBC1D8E356A005827D3 /* ExamViewController.m in Sources */,
 				C2AF98F21D40A2440030BE3F /* BlockViewController.m in Sources */,
 				C2AF98CD1D408B700030BE3F /* main.m in Sources */,
