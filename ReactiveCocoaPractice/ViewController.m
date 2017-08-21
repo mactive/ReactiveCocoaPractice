@@ -39,6 +39,14 @@ static int static_global_val = 2;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    
+//    UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+//    webView.scalesPageToFit = YES;//自动对页面进行缩放以适应屏幕
+//    
+//    NSURLRequest *request =[NSURLRequest requestWithURL:
+//                            [NSURL URLWithString:@"http://develop.kd.waimaie.waimai.sankuai.info/open_store_m/imgtest?acctId=8468051&appType=5&wmPoiId=106194&token=0-sIhZL_lHwdioIjf7rKBMoaOhmvOvl91XGnJvY9zqgw%2A&wm_ctype=iphone&userid=&wm_dversion=10"]];
+//    [self.view addSubview:webView];
+//    [webView loadRequest:request];
 
 //    [self testFuncC];
 //    [self gcdTest3];
@@ -46,29 +54,29 @@ static int static_global_val = 2;
 //    [self gcdTestTime];
 
 //    [self blockPassValue];
-    PersonJSExports *personJS = [[PersonJSExports alloc]init];
-    
-    UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    button.titleLabel.text = @"adfasdf";
-    [button setFrame:CGRectMake(100, 100, 100, 100)];
-    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:button];
-    
-    
-    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    button1.titleLabel.text = @"2222";
-    [button1 setFrame:CGRectMake(100, 200, 100, 100)];
-    [button1 addTarget:self action:@selector(action1) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:button1];
-    
-    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeInfoLight];
-    button2.titleLabel.text = @"3333";
-    [button2 setFrame:CGRectMake(100, 300, 100, 100)];
-    [button2 addTarget:self action:@selector(button2) forControlEvents:UIControlEventTouchUpInside];
-    
-    [self.view addSubview:button2];
+//    PersonJSExports *personJS = [[PersonJSExports alloc]init];
+//    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeInfoLight];
+//    button.titleLabel.text = @"adfasdf";
+//    [button setFrame:CGRectMake(100, 100, 100, 100)];
+//    [button addTarget:self action:@selector(action) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self.view addSubview:button];
+//    
+//    
+//    UIButton *button1 = [UIButton buttonWithType:UIButtonTypeInfoLight];
+//    button1.titleLabel.text = @"2222";
+//    [button1 setFrame:CGRectMake(100, 200, 100, 100)];
+//    [button1 addTarget:self action:@selector(action1) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self.view addSubview:button1];
+//    
+//    UIButton *button2 = [UIButton buttonWithType:UIButtonTypeInfoLight];
+//    button2.titleLabel.text = @"3333";
+//    [button2 setFrame:CGRectMake(100, 300, 100, 100)];
+//    [button2 addTarget:self action:@selector(button2) forControlEvents:UIControlEventTouchUpInside];
+//    
+//    [self.view addSubview:button2];
 
 
 }

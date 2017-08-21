@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mJH-oa-shI">
+    <device id="retina5_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -16,33 +19,39 @@
                         <viewControllerLayoutGuide type="bottom" id="nFP-SJ-ecQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fzy-hI-Rga">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LabelXXXXXX" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="imr-Me-IcI">
-                                <frame key="frameInset" minX="133" minY="489" width="109" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rVm-cf-UdB" userLabel="Red">
-                                <frame key="frameInset" minX="87" minY="220" width="200" height="128"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rVm-cf-UdB" userLabel="Red">
+                                <rect key="frame" x="120" y="40" width="496" height="50"/>
                                 <color key="backgroundColor" red="1" green="0.34877499708973392" blue="0.36173133929011658" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="On8-Z0-DqJ"/>
+                                    <constraint firstAttribute="height" constant="50" id="On8-Z0-DqJ"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdN-1X-Y9z">
+                                <rect key="frame" x="67" y="449" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lFg-fs-C77" userLabel="Red">
+                                <rect key="frame" x="70" y="100" width="596" height="50"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="wzk-AE-9PI"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="rVm-cf-UdB" secondAttribute="trailing" constant="100" id="2DV-pe-4w1"/>
-                            <constraint firstItem="rVm-cf-UdB" firstAttribute="top" secondItem="g65-GW-zPK" secondAttribute="bottom" constant="100" id="NVr-Fg-7VJ"/>
+                            <constraint firstItem="lFg-fs-C77" firstAttribute="top" secondItem="rVm-cf-UdB" secondAttribute="bottom" constant="10" id="Ibd-1K-fSa"/>
+                            <constraint firstItem="rVm-cf-UdB" firstAttribute="top" secondItem="g65-GW-zPK" secondAttribute="bottom" constant="20" id="NVr-Fg-7VJ"/>
                             <constraint firstItem="rVm-cf-UdB" firstAttribute="leading" secondItem="fzy-hI-Rga" secondAttribute="leadingMargin" constant="100" id="V2M-Vr-e7b"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="lFg-fs-C77" secondAttribute="trailing" constant="50" id="at7-d6-hFH"/>
+                            <constraint firstItem="lFg-fs-C77" firstAttribute="leading" secondItem="fzy-hI-Rga" secondAttribute="leadingMargin" constant="50" id="yXT-n6-KGv"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="IBLabel" destination="imr-Me-IcI" id="9U8-1T-5YG"/>
                         <outlet property="redView" destination="rVm-cf-UdB" id="VeC-Cn-G9K"/>
                         <outlet property="theView" destination="fzy-hI-Rga" id="1iG-x4-r9h"/>
                     </connections>
